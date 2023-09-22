@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+        }
+        .head{
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            position: relative;
+            border: 2px solid black;
+        }
+        .satu{
+            background-color: red;
+            position: absolute;
+            z-index: 9999;
+        }
+        .dua{
+            background-color: green;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: -9999;
+        }
+        .tiga{
+            background-color: blue;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            z-index: 1;
+        }
+        
+      
+    </style>
+</head>
+<body>
+    <div class="head">
+    <div class="satu"></div>
+    <div class="dua"></div>
+    <div class="tiga"></div>
+</div>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'bebasneue';
+    src: url('../fonts/bebasneue.woff')format('woff');
+}
+body{
+    font: 18px/36px 'bebasneue',arial,sans-serif;
+    background-color:#FFF5E0;
+}
+h1{
+    font-family: 'bebasneue',arial, sans-serif;
+    text-align: center;
+    font-size: 24px;
+    margin: 20px;
+    text-shadow: 2px 2px 5px 5px white;
+}
+.container{
+    width: 600pt;
+    background-color: #FF6969;
+    margin: auto;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0,.5);
+}
+.gallery li{
+    width: 120px;
+    height: 120px;
+    /* overflow: hidden; */
+    border: 3px solid #141E46;
+    float: left;
+    margin: 20pt;
+    position: relative;
+}
+.gallery li img,
+.gallery li,
+.gallery li span{
+    border-radius: 50%;
+}
+.gallery li span{
+    display: block;
+    width: 120px;
+    height: 120px;
+    color: black;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 120px; 
+    text-shadow: 1px 1px 1px #ddd;
+    opacity: 0;
+    transition: .3s;
+    transform: scale(0) rotate(0deg);
+}
+.gallery li a:hover span{
+    opacity: 0.5;
+    transform: scale(1) rotate(360deg);
+    background-color:#141E46
+}
+.clear{
+    clear: both;
+}
+.overlay{
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0,0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .4s;
+    z-index: 9999;
+    overflow: hidden;
+    text-align: center;
+    padding: 100px 0;
+}
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0,.6);
+}
+.overlay img {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0,.5);
+    max-height: 100%;   
+}
+.overlay:target img{
+    animation: zoom .7s;
+}
+.container .gallery .overlay img{
+    border-radius: 0;
+}
+p{
+    position: relative;
+    color: #ddd;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0,.7);
+}
+.overlay .close{
+    font-size: 30px;
+    position: absolute;
+    top:50px;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    left: 50%;
+    line-height: 20px;
+    opacity: .9;
+    
+}
+.overlay:target .close,p{
+    animation: slide .8s;
+}
+.next,.prev{
+    width: 70px;
+    height: 70px;
+    background-image: url(../img/slide-right.png);
+    position: absolute;
+    text-indent: -9999px;
+    top: 40%;
+    margin-left: 40px;
+    opacity: 0;
+   
+}
+.prev{
+    background-image: url(../img/slide-left.png);
+    margin-left: -100px;
+}
+.overlay:target .next,.overlay:target .prev{
+    animation: fade 2s forwards;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(0) ;
+        
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1) ;
+        opacity: 1;
+    }
+}
+@keyframes slide{
+    0%{
+        margin-top: -20px;
+        opacity: 0;
+    }
+    100%{
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

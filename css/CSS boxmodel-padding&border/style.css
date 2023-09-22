@@ -1,0 +1,16 @@
+div{
+	width: 300px;
+	height: 300px;
+	margin: 20px auto;
+	box-sizing: border-box;
+}
+.satu{
+	background-color: skyblue;
+	padding:30px ;
+	border: 3px solid red;
+}
+.dua{
+	background-color: cyan;
+	padding: 20px ;
+	border:5px dotted violet;
+}

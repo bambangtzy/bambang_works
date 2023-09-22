@@ -1,0 +1,13 @@
+$mycolor: salmon;
+
+header {
+  background-color: aqua;
+}
+main {
+  width: 12;
+  height: 100px;
+  background-color: $mycolor;
+}
+footer {
+  display: none;
+}

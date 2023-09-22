@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-shadow</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+            background-color: aqua;
+            box-shadow: 5px -5px 20px rgba(0, 0, 0, .75);
+        }
+        .main{
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+            border-radius: 50%;
+            background-color: aqua;
+            box-shadow: 0 0 0 5px rgba(0, 0, 0, .75),
+            0 0 0 10px rgba(255, 0, 0, .75),
+            0 0 0 15px rgba(0, 255, 0, .75);  
+        }
+        h1{
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, .75);
+        }
+        /* contoh text shadow pak ghalih
+          https://codepen.io/sandhikagalih/pen/YWyjjP
+           */
+    </style>
+</head>
+<body>
+    <h1>gua gedik</h1>
+    <div ></div>
+    <div class="main"></div>
+</body>
+</html>
